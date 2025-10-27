@@ -1,0 +1,51 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #0b1020;
+  --foreground: #eef1ff;
+}
+
+html, body, :root {
+  height: 100%;
+}
+
+body {
+  color: var(--foreground);
+  background: radial-gradient(1200px 600px at 10% 10%, rgba(76,104,255,0.25), transparent 40%),
+              radial-gradient(800px 400px at 90% 20%, rgba(118,144,255,0.25), transparent 40%),
+              #0b1020;
+}
+
+.container-page {
+  @apply max-w-6xl mx-auto px-4;
+}
+
+.card {
+  @apply bg-white/5 backdrop-blur rounded-xl border border-white/10 shadow-xl;
+}
+
+.btn {
+  @apply inline-flex items-center gap-2 px-4 py-2 rounded-lg font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-brand-400 disabled:opacity-50 disabled:cursor-not-allowed;
+}
+.btn-primary {
+  @apply bg-brand-500 text-white hover:bg-brand-400 focus:ring-offset-slate-900;
+}
+.btn-secondary {
+  @apply bg-white/10 text-white hover:bg-white/20;
+}
+
+.input {
+  @apply bg-white/5 border border-white/10 rounded-lg px-3 py-2 text-white placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-brand-400;
+}
+
+.table {
+  @apply w-full text-sm;
+}
+.table th {
+  @apply text-left font-semibold text-white/80 px-3 py-2 border-b border-white/10;
+}
+.table td {
+  @apply px-3 py-2 border-b border-white/5;
+}
